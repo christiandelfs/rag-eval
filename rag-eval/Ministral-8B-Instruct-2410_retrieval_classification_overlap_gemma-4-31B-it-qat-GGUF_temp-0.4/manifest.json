@@ -1,0 +1,78 @@
+{
+  "experiment_name": "Ministral-8B-Instruct-2410_retrieval_classification_overlap_gemma-4-31B-it-qat-GGUF_temp-0.4",
+  "created_at": "2026-08-25T16:03:27.987502",
+  "dataset_name": null,
+  "dataset_hash": "58c1fd127543af5c",
+  "total_items": 30,
+  "status": "completed",
+  "completed_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "error": null,
+  "started_at": "2026-08-25T16:03:27.987502",
+  "completed_at": "2026-08-25T16:06:34.070817",
+  "total_duration_seconds": 186.07705600000918,
+  "dataset_path": null,
+  "grader_config": {
+    "grader_class": "CriterionGrader",
+    "judges": [
+      {
+        "judge_id": "default",
+        "model": "apphubai/unsloth/gemma-4-31B-it-qat-GGUF:UD-Q4_K_XL",
+        "weight": 1.0,
+        "max_parallel_requests": 1
+      }
+    ],
+    "aggregation": "majority",
+    "few_shot_config": {
+      "n_examples": 3,
+      "balance_verdicts": true,
+      "include_reason": false
+    },
+    "master_seed": 152801127,
+    "shuffle_options": true,
+    "auto_na_option": true,
+    "cannot_assess_config": {
+      "strategy": "skip",
+      "partial_credit": 0.5
+    }
+  },
+  "eval_config": {
+    "fail_fast": false,
+    "show_progress": true,
+    "progress_style": "simple",
+    "max_concurrent_items": 1,
+    "experiment_name": "Ministral-8B-Instruct-2410_retrieval_classification_overlap_gemma-4-31B-it-qat-GGUF_temp-0.4",
+    "experiments_dir": "./rag-eval",
+    "resume": true
+  }
+}
