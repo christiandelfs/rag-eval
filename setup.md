@@ -9,7 +9,7 @@ Anweisungen zur Einrichtung der Umgebungen für die Durchführung der verschiede
 Hugging-Face Dataset via git clonen
 
 
-git clone git@hf.co:datasets/vectara/open_ragbench
+git clone git@hf\.co:datasets/vectara/open_ragbench
 
 
 ## Datensatz pdfqa/pdfQA-Annotations
@@ -18,7 +18,7 @@ git clone git@hf.co:datasets/vectara/open_ragbench
 Hugging-Face Dataset via git clonen
 
 
-git clone git@hf.co:datasets/pdfqa/pdfQA-Annotations
+git clone git@hf\.co:datasets/pdfqa/pdfQA-Annotations
 
 
 ## Sprachmodelle
@@ -32,7 +32,7 @@ Umgebung zur Bereitstellung der LLMs über Rest-API mit vLLM
 
 python3 -m venv /home/chris/venv/vllm  
 source venv/vllm/bin/activate  
-pip install vllm>=0.16.0
+pip install vllm>=0\.16\.0
 
 
 ### vllm serve
@@ -45,9 +45,9 @@ vllm serve mistralai/Ministral-8B-Instruct-2410 \\
 --tokenizer_mode mistral \\  
 --config_format mistral \\  
 --load\_format mistral \\  
---host 192.168.5.133 \\  
+--host 192\.168\.5\.133 \\  
 --port 8001 \\  
---gpu-memory-utilization 0.8 \\  
+--gpu-memory-utilization 0\.8 \\  
 --api-key "oA#-c84mE" \\  
 --max-model-len 19072
 
@@ -55,10 +55,10 @@ vllm serve mistralai/Ministral-8B-Instruct-2410 \\
 #### meta-llama/Llama-3.1-8B-Instruct
 
 
-vllm serve meta-llama/Llama-3.1-8B-Instruct \\  
---host 192.168.5.133 \\  
+vllm serve meta-llama/Llama-3\.1-8B-Instruct \\  
+--host 192\.168\.5\.133 \\  
 --port 8001 \\  
---gpu-memory-utilization 0.8 \\  
+--gpu-memory-utilization 0\.8 \\  
 --api-key "oA#-c84mE" \\  
 --max-model-len 21504
 
@@ -76,7 +76,7 @@ python3 -m venv /home/chris/venv/vllm
 source venv/vllm/bin/activate
 
 
-pip install vllm>=0.16.0
+pip install vllm>=0\.16\.0
 
 
 ### vllm serve
@@ -87,9 +87,9 @@ pip install vllm>=0.16.0
 
 vllm serve nvidia/llama-nemotron-embed-1b-v2 \\  
 --trust-remote-code \\  
---host 192.168.5.133 \\  
+--host 192\.168\.5\.133 \\  
 --port 8002 \\  
---gpu-memory-utilization 0.1 \\  
+--gpu-memory-utilization 0\.1 \\  
 --api-key "oA#-c84mE"
 
 
@@ -98,9 +98,9 @@ vllm serve nvidia/llama-nemotron-embed-1b-v2 \\
 
 vllm serve intfloat/multilingual-e5-large \\  
 --dtype bfloat16 \\  
---host 192.168.5.133 \\  
+--host 192\.168\.5\.133 \\  
 --port 8002 \\  
---gpu-memory-utilization 0.1 \\  
+--gpu-memory-utilization 0\.1 \\  
 --api-key "oA#-c84mE"
 
 
@@ -108,7 +108,7 @@ vllm serve intfloat/multilingual-e5-large \\
 
 
 Anweisungen zur Ausführung der Redis In-Memory DB als Vector-Store als Docker-Container  
-https://hub.docker.com/r/redis/redis-stack-server  
+https://hub\.docker\.com/r/redis/redis-stack-server  
 Docker-Container als root ausführen  
 su
 
@@ -124,7 +124,7 @@ docker cp redis-stack:/data /opt/docker-redis-stack/redis-stack-data
 ### Server starten
 
 
-docker run -d -p 6379:6379 -v "./redis-stack-data:/data" -e REDIS\_ARGS="--requirepass 3cAC7q4dp" --restart always --name redis-stack redis/redis-stack-server:latest
+docker run -d -p 6379:6379 -v "\./redis-stack-data:/data" -e REDIS\_ARGS="--requirepass 3cAC7q4dp" --restart always --name redis-stack redis/redis-stack-server:latest
 
 
 ### Container logs
@@ -137,7 +137,7 @@ docker logs -f -n 10 redis-stack
 ### Redis-CLI
 
 
-https://redis.io/docs/latest/commands/  
+https://redis\.io/docs/latest/commands/  
 docker exec -it redis-stack redis-cli
 
 
@@ -156,11 +156,11 @@ FLUSHALL SYNC
 Index erzeugen
 
 
-FT.CREATE idx:document ON JSON PREFIX 1 document: SCHEMA \$.document AS document TEXT NOSTEM \$.page AS page NUMERIC \$.content AS content TEXT \$.content\_embeddings AS vector VECTOR FLAT 6 TYPE FLOAT16 DIM 2048 DISTANCE\_METRIC COSINE
+FT\.CREATE idx:document ON JSON PREFIX 1 document: SCHEMA $\.document AS document TEXT NOSTEM $\.page AS page NUMERIC $\.content AS content TEXT $\.content\_embeddings AS vector VECTOR FLAT 6 TYPE FLOAT16 DIM 2048 DISTANCE\_METRIC COSINE
 
 
-FT.\_LIST  
-FT.INFO idx:document
+FT\.\_LIST  
+FT\.INFO idx:document
 
 
 ## Redis Index
@@ -200,7 +200,7 @@ Umgebung für Durchführung von Datensatz-Analysen und Preprocessing
 ### conda Environment (Windows)
 
 
-conda create --name dski python=3.11.2  
+conda create --name dski python=3\.11\.2  
 conda activate dski  
 pip install notebook ipywidgets pandas pymupdf openai plotly regex pyarrow redis statsmodels datasets scipy
 
@@ -222,26 +222,26 @@ pip install notebook ipywidgets pandas openai plotly pymupdf4llm docling regex p
 ###  Tesseract OCR
 
 
-https://github.com/tesseract-ocr/tessdata  
-Dateien deu.traineddata etc. in lokales Verzeichnis kopieren und Umgebungsvariable "%env TESSDATA\_PREFIX=" für Pfad in Jupyter-Notebook setzen
+https://github\.com/tesseract-ocr/tessdata  
+Dateien deu\.traineddata etc\. in lokales Verzeichnis kopieren und Umgebungsvariable "%env TESSDATA\_PREFIX=" für Pfad in Jupyter-Notebook setzen
 
 
 ### ibm-granite docling OCR/Document conversion
 
 
 vllm serve ibm-granite/granite-docling-258M \\  
---host 192.168.5.133 \\  
+--host 192\.168\.5\.133 \\  
 --port 8003 \\  
 --max-num-seqs 512 \\  
 --max-num-batched-tokens 8192 \\  
 --enable-chunked-prefill \\  
---gpu-memory-utilization 0.2
+--gpu-memory-utilization 0\.2
 
 
 ## Segmentierung Model (Random Forest etc.)
 
 
-Umgebung für Training der Klassifikationsmodelle zur Segmentierung der Dokumente mit baumbasierten Verfahren wie Random Forest etc.
+Umgebung für Training der Klassifikationsmodelle zur Segmentierung der Dokumente mit baumbasierten Verfahren wie Random Forest etc\.
 
 
 ### Python venv
@@ -283,7 +283,7 @@ pip install notebook ipywidgets numpy plotly torch transformers scipy
 ## AutoRubric
 
 
-https://autorubric.org/  
+https://autorubric\.org/  
 Umgebung zur Durchführung der automatisierten Evaluierung der Modell-Antworten mit AutoRubric
 
 
