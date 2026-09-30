@@ -9,7 +9,7 @@ Anweisungen zur Einrichtung der Umgebungen für die Durchführung der verschiede
 Hugging-Face Dataset via git clonen
 
 
-git clone git@hf\.co:datasets/vectara/open_ragbench
+git clone git@hf.co:datasets/vectara/open_ragbench
 
 
 ## Datensatz pdfqa/pdfQA-Annotations
@@ -18,7 +18,7 @@ git clone git@hf\.co:datasets/vectara/open_ragbench
 Hugging-Face Dataset via git clonen
 
 
-git clone git@hf\.co:datasets/pdfqa/pdfQA-Annotations
+git clone git@hf.co:datasets/pdfqa/pdfQA-Annotations
 
 
 ## Sprachmodelle
@@ -108,7 +108,7 @@ vllm serve intfloat/multilingual-e5-large \\
 
 
 Anweisungen zur Ausführung der Redis In-Memory DB als Vector-Store als Docker-Container  
-https://hub\.docker\.com/r/redis/redis-stack-server  
+https://hub.docker.com/r/redis/redis-stack-server  
 Docker-Container als root ausführen  
 su
 
@@ -137,7 +137,7 @@ docker logs -f -n 10 redis-stack
 ### Redis-CLI
 
 
-https://redis\.io/docs/latest/commands/  
+https://redis.io/docs/latest/commands/  
 docker exec -it redis-stack redis-cli
 
 
@@ -222,7 +222,7 @@ pip install notebook ipywidgets pandas openai plotly pymupdf4llm docling regex p
 ###  Tesseract OCR
 
 
-https://github\.com/tesseract-ocr/tessdata  
+https://github.com/tesseract-ocr/tessdata  
 Dateien deu\.traineddata etc\. in lokales Verzeichnis kopieren und Umgebungsvariable "%env TESSDATA\_PREFIX=" für Pfad in Jupyter-Notebook setzen
 
 
@@ -283,7 +283,7 @@ pip install notebook ipywidgets numpy plotly torch transformers scipy
 ## AutoRubric
 
 
-https://autorubric\.org/  
+https://autorubric.org/  
 Umgebung zur Durchführung der automatisierten Evaluierung der Modell-Antworten mit AutoRubric
 
 
