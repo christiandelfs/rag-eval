@@ -41,7 +41,7 @@ pip install vllm>=0.16.0
 #### mistralai/Ministral-8B-Instruct-2410
 
 
-vllm serve mistralai/Ministral-8B-Instruct-2410  
+vllm serve mistralai/Ministral-8B-Instruct-2410 \\  
 --tokenizer_mode mistral \\  
 --config_format mistral \\  
 --load\_format mistral \\  
